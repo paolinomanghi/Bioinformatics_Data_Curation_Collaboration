@@ -20,9 +20,6 @@ osteoarthritis:
 control:
   description: control
   meaning:  http://www.ebi.ac.uk/efo/EFO_0001461
-NK:
-  description: natural killer cell
-  meaning: http://www.ebi.ac.uk/efo/EFO_0000573 #needs review
 pyelonefritis:
   description: pyelonephritis
   meaning:  http://www.ebi.ac.uk/efo/EFO_1001141
@@ -53,6 +50,9 @@ adenoma:
 fatty_liver:
   description: fatty liver
   meaning:  http://purl.obolibrary.org/obo/MONDO_0004790
+IGT:
+  description: Impaired glucose tolerance
+  meaning: http://purl.obolibrary.org/obo/HP_0040270
 hypertension:
   description: hypertension
   meaning:  http://www.ebi.ac.uk/efo/EFO_0000537
@@ -87,20 +87,20 @@ CDI:
   description: clostridium difficile infection
   meaning:  http://www.ebi.ac.uk/efo/EFO_0009130
 IBD:
-  description: irritable bowel syndrome
-  meaning:  http://www.ebi.ac.uk/efo/EFO_0000555
+  description: inflammatory bowel disease  ### the irritable bowel is a much lighter condition
+  meaning:  http://www.ebi.ac.uk/efo/EFO_0003767
 T2D:
   description: type 2 diabetes mellitus
-  meaning:  http://www.ebi.ac.uk/efo/EFO_0001360
+  meaning:  http://purl.obolibrary.org/obo/MONDO_0005148
 T1D:
-  description: type 1 diabetes mellitus
-  meaning:  http://www.ebi.ac.uk/efo/EFO_0001359
+  description: autoimmune type 1 diabetes
+  meaning:  http://www.ebi.ac.uk/efo/EFO_0009756
 AD:
-  description: alzheimer's disease
-  meaning:  http://www.ebi.ac.uk/efo/EFO_0000249
+  description: recalcitrant atopic dermatitis
+  meaning:  http://www.ebi.ac.uk/efo/EFO_1000651
 AR:
-  description: Aortic Regurgitation ???
-  meaning: http://www.ebi.ac.uk/efo/EFO_1000815 #needs review
+  description: Atopic Rhinitis
+  meaning: http://www.ebi.ac.uk/efo/EFO_0007159 
 IGT:
   description: abnormal glucose tolerance
   meaning:  http://www.ebi.ac.uk/efo/EFO_0002546
@@ -166,7 +166,7 @@ metabolic_syndrome:
   meaning:  http://www.ebi.ac.uk/efo/EFO_0000195
 FMT:
   description: fecal microbiota transplant
-  meaning: #cannot find ontology
+  meaning: #cannot find ontology => still quite novel, I expect ontologies not available 
 premature_born:
   description: premature birth
   meaning:  http://www.ebi.ac.uk/efo/EFO_0003917
@@ -174,11 +174,11 @@ periodontitis:
   description: periodontitis
   meaning:  http://www.ebi.ac.uk/efo/EFO_0000649
 SRP:
-  description: #signal recognition particle?
-  meaning: #http://purl.org/obo/owl/GO#GO_0005786
+  description: scaling and root planing ### this is a therapy for periodontitis (a therapy given to the tooth). 
+  meaning: ## cannot find any ontology
 STH:
-  description: somatotropin
-  meaning:  http://purl.org/obo/owl/FMA#FMA_74637  #needs review
+  description: intestinal helminthiasis
+  meaning:  http://purl.obolibrary.org/obo/MONDO_0024271
 BD:
   description: behcet's syndrome
   meaning:  http://www.ebi.ac.uk/efo/EFO_0003780
@@ -201,13 +201,13 @@ hypercholesterolemia:
   description: hypercholesterolemia
   meaning:  http://purl.obolibrary.org/obo/HP_0003124
 ascaris_lumbricoides:
-  description: ascaris lumbricoides
+  description: Ascaris lumbricoides
   meaning:  http://www.ebi.ac.uk/efo/EFO_0007154
 necator_americanus:
-  description: necator americanus
+  description: Necator americanus
   meaning: http://purl.obolibrary.org/obo/NCIT_C123524
 trichuris_trichiura:
-  description: trichuris trichiura
+  description: Trichuris trichiura
   meaning:  http://www.ebi.ac.uk/efo/EFO_0007524
 metastases:
   description: metastasis status
@@ -235,14 +235,39 @@ cholera:
   description: cholera
   meaning: http://purl.obolibrary.org/obo/NCIT_C157812
 T1D_nonconverter:
-  description: #what is a non-converter???
-  meaning:
+  description: Individuals genetic predisposed to T1D, which are healthy and do not show islet autoantibodies
+  meaning: Related to non-T1D individuals (controls)
 T1D_seroconverter:
-  description: Type 1 diabetes usually has a preclinical phase identified by circulating islet autoantibodies, but the rate of progression to diabetes after seroconversion to islet autoantibodies is uncertain.
-  meaning:
+  description: Individuals genetic predisposed to T1D, which show islet autoantibodies
+  meaning: Related to non-T1D individuals (controls)
 NAFLD:
   description: non alcoholic fatty liver disease
   meaning:  http://www.ebi.ac.uk/efo/EFO_1001248
 Indeterminate_colitis:
-  description: indeterminate colitis
-  meaning:  http://www.ebi.ac.uk/efo/EFO_1000034
+  description: colitis
+  meaning:  http://www.ebi.ac.uk/efo/EFO_0003872 ## here indetermined was referring to our incapacity of determining, is simply that we do not have enough info
+CD:
+  description: Crohn's disease
+  meaning: http://www.ebi.ac.uk/efo/EFO_0000384
+CAD:
+  description: coronary artery disease
+  meaning: http://www.ebi.ac.uk/efo/EFO_0001645
+HF:
+  description: heart failure
+  meaning:  http://www.ebi.ac.uk/efo/EFO_0003144
+PD:
+  description: Parkinson disease
+  meaning: http://purl.obolibrary.org/obo/MONDO_0005180
+ME/CFS:
+  description: chronic fatigue syndrome
+  meaning: http://www.ebi.ac.uk/efo/EFO_0004540
+migraine:
+  description: headache disorder
+  meaning: http://www.ebi.ac.uk/efo/EFO_0009550
+peri-implantitis:
+  description: Peri-Implantitis
+  meaning: http://www.ebi.ac.uk/efo/EFO_1001390
+mucositis:
+  description: mucositis
+  meaning:  http://www.ebi.ac.uk/efo/EFO_1001898
+  
